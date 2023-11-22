@@ -1,0 +1,167 @@
+
+.banner {
+  background-image: url('/path/to/banner-image.jpg'); /* Substitua com o caminho da imagem */
+  background-size: cover;
+  text-align: center;
+  padding: 50px 20px;
+  color: black;
+}
+
+.banner p {
+  margin-top: 10px;
+}
+
+/* Estilização seção de menu */
+
+.menuSection {
+  background-color: #fff; /* Branco para a seção de menu para destacar */
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidade */
+  border-radius: 10px; /* Borda arredondada para um look suave */
+  margin: 20px auto; /* Espaçamento */
+  max-width: 900px; /* Largura máxima para manter o layout gerenciável em telas grandes */
+  text-align: center;
+}
+.menuItems {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.menuItem {
+  width: 200px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.menuItem img {
+  width: 180px; /* Largura fixa */
+  height: 120px; /* Altura fixa */
+  border-radius: 5px;
+  object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+  margin-bottom: 10px;
+}
+
+.menuSection, .promotionsSection, .reservationsSection, .reviewsSection {
+  padding: 20px;
+  text-align: center;
+}
+
+.menuSection h2, .promotionsSection h2, .reservationsSection h2, .reviewsSection h2 {
+  margin-bottom: 20px;
+}
+
+/* Estilização seção de promoções */
+.promotionsSection {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin: 20px auto;
+  max-width: 900px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.promotionItems {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.promotionItem {
+  width: 200px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.promotionItem img {
+  width: 180px; /* Largura fixa */
+  height: 120px; /* Altura fixa */
+  border-radius: 5px;
+  object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+  margin-bottom: 10px;
+}
+
+/* Estilização seção de reservas */
+.reservationsSection {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin: 20px auto;
+  max-width: 900px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.reservationButton {
+  background-color: #4CAF50; /* Cor verde para o botão */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.reservationButton:hover {
+  background-color: #45a049; /* Cor um pouco mais escura ao passar o mouse */
+}
+
+/* Estilização seção de reviews */
+.reviewsSection {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin: 20px auto;
+  max-width: 900px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.reviewItem {
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+  text-align: left;
+}
+
+.userImage {
+  width: 50px; /* Tamanho fixo */
+  height: 50px; /* Tamanho fixo */
+  border-radius: 50%; /* Forma circular */
+  object-fit: cover; /* Garante que a imagem preencha o espaço */
+  margin-right: 10px;
+}
+
+.starRating {
+  color: #ffd700; /* Cor dourada para as estrelas */
+  font-size: 20px;
+}
+
+.userName {
+  font-weight: bold;
+}
+
+/* Reset do float */
+.reviewItem:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .banner {
+    padding: 30px 10px;
+  }
+}

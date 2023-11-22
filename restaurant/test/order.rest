@@ -1,0 +1,94 @@
+@host = http://localhost:3000
+
+### Create a new order with different menu items - Order 1
+POST {{host}}/orders
+Content-Type: application/json
+
+{
+  "customerId": 1,
+  "items": [
+    { "menuId": 1, "quantity": 2 },
+    { "menuId": 2, "quantity": 1 }
+  ]
+}
+
+### Create a new order with different menu items - Order 2
+POST {{host}}/orders
+Content-Type: application/json
+
+{
+  "customerId": 2,
+  "items": [
+    { "menuId": 3, "quantity": 3 },
+    { "menuId": 4, "quantity": 1 }
+  ]
+}
+
+### Create a new order with different menu items - Order 3
+POST {{host}}/orders
+Content-Type: application/json
+
+{
+  "customerId": 1,
+  "items": [
+    { "menuId": 2, "quantity": 2 },
+    { "menuId": 5, "quantity": 3 }
+  ]
+}
+
+### Create a new order with different menu items - Order 4
+POST {{host}}/orders
+Content-Type: application/json
+
+{
+  "customerId": 3,
+  "items": [
+    { "menuId": 1, "quantity": 1 },
+    { "menuId": 3, "quantity": 1 },
+    { "menuId": 5, "quantity": 1 }
+  ]
+}
+
+### Create a new order with different menu items - Order 5
+POST {{host}}/orders
+Content-Type: application/json
+
+{
+  "customerId": 1,
+  "items": [
+    { "menuId": 4, "quantity": 1 },
+    { "menuId": 6, "quantity": 1 }
+  ]
+}
+
+
+
+### Get all orders
+GET {{host}}/orders
+Content-Type: application/json
+
+### Get order by ID - replace with an actual order ID from your database
+GET {{host}}/orders/3
+Content-Type: application/json
+
+### Update order by ID - replace ":id" and the request body with actual values
+PUT {{host}}/orders/3
+Content-Type: application/json
+
+{
+  "customerId": 1,
+  "items": [
+    {
+      "menuId": 2,
+      "quantity": 4
+    },
+    {
+      "menuId": 3,
+      "quantity": 2
+    }
+  ]
+}
+
+### Delete order by ID - replace ":id" with an actual order ID to delete
+DELETE {{host}}/orders/2
+Content-Type: application/json

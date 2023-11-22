@@ -1,0 +1,9 @@
+# POST Request para a Rota de Login
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+# Corpo da solicitação JSON com o usuário e senha
+{
+  "username": "teste",
+  "password": "teste"
+}

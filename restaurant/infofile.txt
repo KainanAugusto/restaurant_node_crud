@@ -1,0 +1,10 @@
+aplicação backend utilizando o framework NestJS com TypeScript. Este backend pode servir como uma API RESTful ou GraphQL para fornecer dados e serviços ao frontend de sua aplicação.
+
+Resumo da Estrutura da Aplicação Backend:
+
+
+Módulos: Servem como contêineres para agrupar funcionalidades relacionadas, como autenticação, usuários, pedidos, etc. Um módulo encapsula controladores, provedores, importações e exportações.
+
+Controladores: São responsáveis por receber as requisições HTTP, processá-las com a ajuda dos serviços e enviar uma resposta ao cliente.
+
+Serviços: Contêm a lógica de negócios e são usados pelos controladores. Eles podem interagir com o banco de dados, realizar cálculos, chamar outras APIs e mais.

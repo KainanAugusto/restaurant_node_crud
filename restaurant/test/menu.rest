@@ -1,0 +1,132 @@
+@host = http://localhost:3000
+
+### Create a new menu item - Pizza Margherita
+POST {{host}}/menu
+Content-Type: application/json
+
+{
+  "dishName": "Pizza Margherita",
+  "price": 8.99
+}
+
+### Create a new menu item - Spaghetti Carbonara
+POST {{host}}/menu
+Content-Type: application/json
+
+{
+  "dishName": "Spaghetti Carbonara",
+  "price": 10.50
+}
+
+### Create a new menu item - Lasagna
+POST {{host}}/menu
+Content-Type: application/json
+
+{
+  "dishName": "Lasagna",
+  "price": 12.00
+}
+
+### Create a new menu item - Caesar Salad
+POST {{host}}/menu
+Content-Type: application/json
+
+{
+  "dishName": "Caesar Salad",
+  "price": 7.99
+}
+
+### Create a new menu item - Mushroom Risotto
+POST {{host}}/menu
+Content-Type: application/json
+
+{
+  "dishName": "Mushroom Risotto",
+  "price": 9.50
+}
+
+### Create a new menu item - Eggplant Parmesan
+POST {{host}}/menu
+Content-Type: application/json
+
+{
+  "dishName": "Eggplant Parmesan",
+  "price": 11.25
+}
+
+### Create a new menu item - Minestrone Soup
+POST {{host}}/menu
+Content-Type: application/json
+
+{
+  "dishName": "Minestrone Soup",
+  "price": 5.50
+}
+
+### Create a new menu item - Grilled Salmon
+POST {{host}}/menu
+Content-Type: application/json
+
+{
+  "dishName": "Grilled Salmon",
+  "price": 15.99
+}
+
+### Create a new menu item - Tiramisu
+POST {{host}}/menu
+Content-Type: application/json
+
+{
+  "dishName": "Tiramisu",
+  "price": 6.50
+}
+
+### Create a new menu item - Garlic Bread
+POST {{host}}/menu
+Content-Type: application/json
+
+{
+  "dishName": "Garlic Bread",
+  "price": 4.99
+}
+
+### Create a new menu item - Penne alla Vodka
+POST {{host}}/menu
+Content-Type: application/json
+
+{
+  "dishName": "Penne alla Vodka",
+  "price": 8.99
+}
+
+### Create a new menu item - Margarita Cocktail
+POST {{host}}/menu
+Content-Type: application/json
+
+{
+  "dishName": "Margarita Cocktail",
+  "price": 7.99
+}
+
+
+
+### Get all menu items
+GET {{host}}/menu
+Content-Type: application/json
+
+### Get a single menu item by id
+GET {{host}}/menu/1
+Content-Type: application/json
+
+### Update a menu item
+PATCH {{host}}/menu/1
+Content-Type: application/json
+
+{
+  "dishName": "Pizza Margherita - Updated",
+  "price": 9.99
+}
+
+### Delete a menu item
+DELETE {{host}}/menu/1
+Content-Type: application/json

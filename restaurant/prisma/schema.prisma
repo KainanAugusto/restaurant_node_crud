@@ -1,0 +1,59 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Menu {
+  id         Int         @id @default(autoincrement())
+  dishName   String
+  price      Float
+  OrderItems OrderItem[]
+}
+
+model Order {
+  id         Int         @id @default(autoincrement())
+  customerId Int
+  dateTime   DateTime    @default(now())
+  address    String      
+  deleted    Boolean     @default(false)
+  Customer   Customer    @relation(fields: [customerId], references: [id])
+  OrderItems OrderItem[] // Relação um-para-muitos com OrderItem
+}
+
+model OrderItem {
+  id       Int   @id @default(autoincrement())
+  orderId  Int
+  menuId   Int
+  quantity Int // Quantidade do item pedido
+  Order    Order @relation(fields: [orderId], references: [id])
+  Menu     Menu  @relation(fields: [menuId], references: [id])
+
+  @@unique([orderId, menuId]) // Uma chave única para evitar duplicatas no mesmo pedido
+}
+
+model Customer {
+  id       Int     @id @default(autoincrement())
+  name     String 
+  email    String  @unique
+  phone    String
+  username String  @unique
+  password String
+  Orders   Order[]
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  name      String   @unique
+  email     String   @unique
+  password  String
+  role      String // Could be 'Admin', 'Manager', 'Employee', etc.
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

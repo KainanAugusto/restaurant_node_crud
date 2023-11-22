@@ -1,0 +1,63 @@
+/* UserMenu.module.css */
+.userMenu {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.arrow {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.arrowOpen {
+    transform: rotate(90deg);
+}
+
+.username {
+    margin-left: 8px;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    /* Faz com que o dropdown comece logo abaixo do menu do usuário */
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdownItem {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdownItemLogout {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dropdownItemLogout svg {
+    font-size: 18px; 
+  }
+  
+  .dropdownItemLogout:hover {
+    background-color: #c0392b;
+  }
+
+.dropdownItem:hover {
+    background-color: #f1f1f1;
+}

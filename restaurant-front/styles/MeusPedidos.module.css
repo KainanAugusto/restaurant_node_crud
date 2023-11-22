@@ -1,0 +1,52 @@
+.container {
+  font-family: Arial, sans-serif;
+}
+
+.table {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.table th, .table td {
+  text-align: left;
+  padding: 15px; /* Aumente o padding para garantir espaço suficiente para centralização */
+  vertical-align: middle; /* Centraliza o conteúdo verticalmente */
+  border-top: 1px solid #dee2e6;
+}
+
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.table-hover tbody tr:hover {
+  color: #212529;
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+.btn-primary, .btn-danger {
+  margin-right: 5px;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+.pedidoItem {
+  margin-bottom: 5px;
+  font-size: 0.9em;
+}
+
+.pedidoItem span {
+  display: inline-block;
+  margin-right: 10px;
+}
+

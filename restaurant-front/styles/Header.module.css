@@ -1,0 +1,120 @@
+/* Header.module.css */
+.header {
+  background: linear-gradient(135deg, rgba(78, 18, 18, 0.945)0, #b30107);
+  color: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.headerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.restaurantName {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Cursive', sans-serif;
+  /* Escolha uma fonte atraente */
+}
+
+.navbar {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navLink {
+  color: #fff;
+  font-size: 1.1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navLink:hover {
+  color: #ffd700;
+  transform: scale(1.1);
+}
+
+.accountOptions {
+  display: flex;
+  gap: 1rem;
+}
+
+.accountButton {
+  background-color: #ffd700;
+  color: #222;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.accountButton:hover {
+  background-color: #fcbf49;
+  transform: scale(1.05);
+}
+
+/* Estilos responsivos para telas menores */
+@media (max-width: 768px) {
+  .headerContent {
+    flex-direction: column;
+    text-align: center;
+
+
+  }
+
+  .accountOptions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #222;
+  /* Cor de fundo do botão */
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2);
+  z-index: 1;
+}
+
+.dropdownContent a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdownContent a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdownContent {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #333;
+}
